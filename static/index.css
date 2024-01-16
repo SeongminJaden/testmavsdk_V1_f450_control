@@ -1,0 +1,143 @@
+   body{
+    margin: 0%;
+    overflow: hidden;
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+  .title_menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 5%;
+    opacity: 1;
+    background-color: #ffffff;
+    box-shadow: 0px 0.5px 3px 3px gray;
+  }
+  #map_container {
+    width: 100%;
+    height: 100%;
+  }
+  #map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .btn{
+    position: absolute;
+    top :5%;
+    right: 0px;
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    opacity: 1;
+    border-radius: 0.2em;
+    background-image: url("../img/menubar.png");
+    background-size: cover;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+  }
+  .gm-fullscreen-control {
+    display:none;
+ }
+ .gm-svpc {
+  display:none;
+}
+  .content {
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 75vw;
+    width: 20vw;
+    height: 85vh;
+    border-radius: 0.2em;
+    opacity: 1;
+    display: none;
+  }
+  .drones{
+    width: 100%;
+    height: 30%;
+    background-color: #1E1E1E;
+    opacity: 0.9;
+    border-radius: 0.4em;
+    margin-top: 15px;
+  }
+  .drone_title{
+    width: 100%;
+    height: 15%;
+  }
+  .drone_title_a{
+    width: 100%;
+    height: 15%;
+  }
+  .drone_title>a{
+    height: 96%;
+    margin: 2% 0 0 5%;
+    float: left;
+    color: #ffffff;
+    font-size: 100%;
+  }
+  .drone_title_a>a{
+    height: 96%;
+    margin: 2% 0 0 5%;
+    float: left;
+    color: #ffffff;
+    font-size: 100%;
+  }
+  .drone_btn{
+    float: right;
+    margin: 3%;
+    height: 14px;
+    width: 14px;
+    background-color: #1E1E1E;
+    background-image: url("../img/test.png");
+    background-size: cover;
+    border: none;
+    padding: 0;
+  }
+  .drone_btn_a{
+    float: right;
+    margin: 3%;
+    height: 14px;
+    width: 14px;
+    background-color: #1E1E1E;
+    background-image: url("../img/test.png");
+    background-size: cover;
+    border: none;
+    padding: 0;
+  }
+  .drone_video{
+    margin: 0 5% 5% 5%;
+    width: 90%;
+    height: 40%;
+    overflow: hidden;
+    border-radius: 0.4em;
+  }
+  .drone_video_a{
+    margin: 0 5% 5% 5%;
+    width: 90%;
+    height: 40%;
+    overflow: hidden;
+    border-radius: 0.4em;
+  }
+  video{
+    width: 100%;
+  }
+  .drone_data_info>a{
+    width: 96%;
+    margin: 2% 0 3% 5%;
+    float: left;
+    color: #ffffff;
+    font-size: 1em;
+  }
+  .drone_data_info_a>a{
+    width: 96%;
+    margin: 2% 0 3% 5%;
+    float: left;
+    color: #ffffff;
+    font-size: 1em;
+  }

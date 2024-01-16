@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="RoboticsCreative Web GCS" /> 
+        <meta property="og:url" content="roboticscreative.co.kr" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="./img/logo.png" /> 
+        <meta property="og:description" content="로보틱스크리에이티브 드론관제 Web GCS" /> 
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="roboticscreative.co.kr">
+        <meta property="og:title" content="RoboticsCreative Web GCS">
+        <meta property="og:image" content="./img/logo.png">
+        <meta property="og:description" content="로보틱스크리에이티브 드론관제 Web GCS">
+        <meta property="og:site_name" content="로보틱스크리에이티브 드론관제 Web GCS">
+        <meta property="og:locale" content="en_US">
+        
+        <!-- 필수는 아니지만, 추천하는 og 태그 -->
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+        <script src="{{ url_for('static', filename='OpenAPI_data/MapAPI.js') }}"></script>
+        <script src="{{ url_for('static', filename='index.js') }}"></script>
+        <script src="{{ url_for('static', filename='test.js') }}"></script>        
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9OZPmbWRyChfnyYnTiTRRmLKiXsFHfpM&callback=initMap">
+    const imageUrl = "{{ url_for('static', filename='img/markers/mm_20_purple.png') }}";
+</script>
+
+        <title>RoboticsCreative Web GCS</title>
+    </head>
+    <div class="wrapper">
+        <div id="map_container">
+            <div id="map"></div>
+            <div class="title_menu">회사 로고, 로그인 정보, 로그아웃버튼</div>
+            <button type="button"class="btn"onclick="toggleDiv()"></button>
+            <div class="content" id="content">
+                <div class="drones">
+                    <div class="drone_title">
+                        <a>드론 A</a>
+                        <button type="button"class="drone_btn"onclick=""></button>
+                    </div>
+                    <div class="drone_video">
+                        <video class="drone_video__content" autoplay muted loop>
+                            <source src="../img/sample.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div class="drone_data_info">
+                        <a>GPS : Null</a>
+                        <a>LTE : Null</a>
+                    </div>
+                </div>
+
+                <div style="height: 25%; width: 100%;  color: #7E7E7E; margin: 1em;">Drone1
+                    <form >
+                    <input type='button' value='misson_drone' onclick="plan1();"/>
+                    <input type='button' value='return_drone' onclick="return_drone();"/>
+                    </form>
+                    home_Lat:
+                    <input id="point_lat" name="point_lat" value="37.39190049401572" /><br />
+                    home_Lng:
+                    <input id="point_lng" name="point_lng" value="126.63967953361517" /><br />
+                    Lat:
+                    <input id="lat" name="lat" value="37.40490431098821" /><br />Lng:
+                    <input id="lng" name="lng" value="126.62792679099266" />
+                    <br />
+                    드론 고도 설정:
+                    <input type="text"id="Alti"value="10" />
+                    <input type='button' value='Altitude' onclick="Altitude();"/>
+                    <input type='button' value='point_list' onclick="point_list();"/>
+                    <input id="delete-markers" type="button" value="Delete Markers" />
+                    
+                </div>
+
+            </div>
+        </div>
+      </div>
+</html>
+
